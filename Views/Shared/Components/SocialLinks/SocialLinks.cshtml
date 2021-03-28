@@ -1,0 +1,15 @@
+﻿@model IEnumerable<View_Component.Models.SocialIcon>
+
+@{
+    ViewData["Title"] = "SocialLinks";
+}
+
+<div class="col-md-12" style="padding-top:50px;">
+    @foreach (var icon in Model)
+    {
+        <a style="background:@icon.IconBgColor" href="@icon.IconTargetUrl">
+            <i class="@icon.IconClass"></i>
+            @icon.IconName
+        </a>
+    }
+</div>  
